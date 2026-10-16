@@ -4,10 +4,10 @@ import pickle as pk
 app=Flask(__name__)
 CORS(app)
 @app.route('/')
-@app.route('/DiabCare')
+@app.route('/HamSpam')
 def index():
-    return render_template('diabetes.html')
-@app.route('/api/diabetes',methods=['POST'])
+    return render_template('email.html')
+@app.route('/api/email',methods=['POST'])
 def diabetes_prediction():
     data = request.get_json()
     email = data["email"]

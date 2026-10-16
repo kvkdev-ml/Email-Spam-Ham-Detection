@@ -291,7 +291,7 @@
             analyzeBtn.innerHTML = `<span>Processing Neural Tensors...</span>`;
 
             try {
-                const response = await fetch("https://kvk-profile-nu.vercel.app/api/spam", {
+                const response = await fetch(window.location.href+"/api/spam", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email: text })
